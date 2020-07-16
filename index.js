@@ -2,7 +2,7 @@ import http from 'http';
 
 const hostname = '127.0.0.1';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -11,6 +11,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`listening on Port ${port}`);
+  console.log(`Listening on Port ${port}`);
 });
 
