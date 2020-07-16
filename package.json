@@ -1,0 +1,23 @@
+{
+  "name": "tech-companies",
+  "version": "1.0.0",
+  "description": "A list of tech companies in Nigeria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiyin-Anne/tech-companies.git"
+  },
+  "author": "Fiyin Akinsiku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiyin-Anne/tech-companies/issues"
+  },
+  "homepage": "https://github.com/Fiyin-Anne/tech-companies#readme",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
