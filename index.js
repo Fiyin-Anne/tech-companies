@@ -1,16 +1,14 @@
-import http from 'http';
-
-const hostname = '0.0.0.0';
-
+import express from 'express';
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end("Hello, world")
-  
-});
+const app = express();
+app.use(express.json());
 
-server.listen(port, hostname, () => {
-  console.log(`Listening on Port ${port}`);
+app.get('/', (req, res) => {
+  res.statusCode(200).json({message: "Welcome to the Homepage."});
+})
+
+app.listen(port, () => {
+  console.log(`Listening on Port ${port}...`);
 });
 
