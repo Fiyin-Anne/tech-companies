@@ -1,10 +1,8 @@
 import express from 'express';
-import company from '../controller/company'
+import Company from '../controller/company.js';
+const companyRouter = express.Router();
 
-const app = express();
+companyRouter.get('/list-companies', Company.listCompanies);
+companyRouter.post('/add-company', Company.create);
 
-//GET list of companies
-app.get('/list-companies', company.listCompanies);
-
-//POST create new company
-app.post('/add-company', company.create);
+export default companyRouter;

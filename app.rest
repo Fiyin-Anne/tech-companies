@@ -1,1 +1,4 @@
-GET  http://127.0.0.1:3000
+GET  http://127.0.0.1:3000/list-companies
+
+###
+POST http://127.0.0.1:3000/add-company
