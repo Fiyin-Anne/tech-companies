@@ -1,15 +1,16 @@
 import express from 'express';
+import bodyParser from 'body-parser'
 const port = process.env.PORT || 3000;
-//const router = express.Router();
+import cors from 'cors';
+
 const app = express();
-
-
-app.use(express.json());
-
-//app.use('/', router);
+app.use(cors());
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.status(200).json({message: "Welcome to the Homepage."});
+  res.status(200).json({text: req.body.message});
 })
 
 //import from routes

@@ -3,6 +3,13 @@
 This repo contains a detailed list of the top tech companies in Nigeria.
 
 # Tests
+
+- Retrieve list of all companies
+GET  http://127.0.0.1:3000/companies
+
+- Return a company
+GET  http://127.0.0.1:3000/company/:id
+
 - Add a company
 POST http://127.0.0.1:3000/add-company
 
@@ -12,14 +19,15 @@ POST http://127.0.0.1:3000/add-company
     employees: 125,
     founder: "Fiyin Akinsiku",
     year: 2020,
-    contact: {
-        email: "info@techbase.com",
-        phone: 0702345678,
-        address: "Ikeja, Lagos"
-    }
+    website: 'www.tech2base.com'
 }
 
-- Retrieve list of all companies
-GET  http://127.0.0.1:3000/list-companies
-
 - Remove a company from the list
+DELETE http://127.0.0.1:3000/delete/:id
+
+- Update number of employees
+PUT http://127.0.0.1:3000/update/:id
+
+{
+    num: 300
+}

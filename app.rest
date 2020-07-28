@@ -1,4 +1,35 @@
-GET  http://127.0.0.1:3000/list-companies
+GET  http://127.0.0.1:3000/companies
+Content-Type: application/json;
+
+###
+GET  http://127.0.0.1:3000/company/21
+
+Content-Type: application/json
 
 ###
 POST http://127.0.0.1:3000/add-company
+
+content-type: application/json
+
+{
+    "name": 54,
+    "location": "Nigeria",
+    "employees": 125,
+    "founder": "Fiyin Akinsiku",
+    "year": 2020,
+    "website": "www.tech2base.com"
+}
+
+###
+DELETE http://127.0.0.1:3000/delete/28
+
+content-type: application/json
+
+###
+PUT http://127.0.0.1:3000/update/21
+
+content-type: application/json
+
+{
+    "num": 300
+}
