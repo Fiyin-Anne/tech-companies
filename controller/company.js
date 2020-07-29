@@ -1,6 +1,7 @@
 //import model
 import pg from 'pg';
 import dotenv from 'dotenv';
+import pool from '../db.js'
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -11,13 +12,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-dotenv.config();
+// dotenv.config();
 
-const pool = new pg.Pool(
-    {connectionString: process.env.DB_URL}
-);
+// const pool = new pg.Pool(
+//     {connectionString: process.env.DB_URL}
+// );
 
-pool.connect();
+// pool.connect();
 
 const Company = {
 
