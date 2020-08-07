@@ -2,7 +2,9 @@ GET  http://127.0.0.1:3000/companies
 Content-Type: application/json;
 
 ###
-GET  http://127.0.0.1:3000/company/21
+GET http://127.0.0.1:3000
+###
+GET  http://127.0.0.1:3000/company/54
 
 Content-Type: application/json
 

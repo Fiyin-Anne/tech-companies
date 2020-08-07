@@ -9,4 +9,6 @@ const pool = new pg.Pool(
 
 pool.connect();
 
+
 export default pool;
+
