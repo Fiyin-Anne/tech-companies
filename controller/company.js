@@ -1,5 +1,5 @@
 import { createCompany, getAll, getCompany, deleteCompany, updateCompany } from '../queries/index.js';
-import pool from '../db.js'
+import pool from '../db/db.js'
 const Company = {
 
     create(req, res) {
