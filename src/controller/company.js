@@ -4,7 +4,6 @@ const Company = {
 
     create(req, res) {
         const { name, location, founder, year, employees, website}  = req.body;
-
         const values = [
             name, location, founder, year, employees, website
             ]   
@@ -30,7 +29,7 @@ const Company = {
         const id = parseInt(req.params.id)
         pool.query(getCompany, [id])
         .then(result => {
-            res.status(200).json({company: result.rows});
+            res.status(200).json({company: result.rows[0]});
         })
         .catch(err => {
             res.status(400).json({error: err})

@@ -10,9 +10,7 @@ app.get('/', (req, res) => {
   res.status(200).json({message: 'Welcome...'});
 })
 
-
-//import from routes
-import companyRouter from './routes/company.js';
+import companyRouter from './src/routes/company.js';
 app.use('/', companyRouter)
 
 const port = process.env.PORT || 3000;
