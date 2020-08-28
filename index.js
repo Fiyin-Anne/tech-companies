@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.status(200).json({message: 'Welcome...'});
 })
 
@@ -17,3 +17,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Listening on Port ${port}...`);
 });
+
+export default app;

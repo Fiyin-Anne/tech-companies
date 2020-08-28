@@ -29,12 +29,16 @@ const Company = {
         const id = parseInt(req.params.id)
         pool.query(getCompany, [id])
         .then(result => {
+            if(result.rowCount < 1) {
+                res.status(200).send("Doesn't exists");
+            }
             res.status(200).json({company: result.rows[0]});
         })
         .catch(err => {
             res.status(400).json({error: err})
         })
     },
+
     deleteCompany(req, res) {
         const id = parseInt(req.params.id)
         pool.query(deleteCompany, [id])

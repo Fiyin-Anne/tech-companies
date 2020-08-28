@@ -1,15 +1,15 @@
-GET  http://127.0.0.1:3000/companies
+GET  http://127.0.0.1:3000/api/companies
 Content-Type: application/json;
 
 ###
-GET http://127.0.0.1:3000
+GET http://127.0.0.1:3000/api
 ###
-GET  http://127.0.0.1:3000/company/54
+GET  http://127.0.0.1:3000/api/company/1
 
 Content-Type: application/json
 
 ###
-POST http://127.0.0.1:3000/add-company
+POST http://127.0.0.1:3000/api/add-company
 
 content-type: application/json
 
