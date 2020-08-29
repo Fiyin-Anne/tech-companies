@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Fiyin-Anne/tech-companies.svg?branch=develop)](https://travis-ci.org/Fiyin-Anne/tech-companies)
+
 # Tech-companies
 
 This repo contains a detailed list of the top tech companies in Nigeria.
