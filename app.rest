@@ -14,7 +14,7 @@ POST http://127.0.0.1:3000/api/add-company
 content-type: application/json
 
 {
-    "name": 54,
+    "name": "New Company",
     "location": "Nigeria",
     "employees": 125,
     "founder": "Fiyin Akinsiku",
