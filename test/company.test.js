@@ -1,7 +1,7 @@
 import app from "../index.js";
 import chai from "chai";
 import chaiHttp from "chai-http";
-import { create } from "../src/controller/company.js";
+//import { create } from "../src/controller/company.js";
 
 const { expect } = chai;
 chai.use(chaiHttp);
@@ -23,7 +23,7 @@ describe("Server!", () => {
       .get("/api/companies")
       .end((err, res) => {
         expect(res).to.have.status(200);
-        expect(res.body).to.have.property('companies')
+        expect(res.body).to.have.property('companies');
         expect(res.body.companies).to.be.a('array');
         done();
       });
@@ -52,7 +52,7 @@ describe("Server!", () => {
         expect(res.body.added).to.have.property('year');
         expect(res.body.added).to.have.property('employees');
         expect(res.body.added).to.have.property('website');
-    done();
+        done();
       })
   })
 
