@@ -1,6 +1,7 @@
 import app from "../index.js";
 import chai from "chai";
 import chaiHttp from "chai-http";
+import { create } from "../src/controller/company.js";
 
 const { expect } = chai;
 chai.use(chaiHttp);
@@ -55,4 +56,15 @@ describe("Server!", () => {
       })
   })
 
+  // it("gets a company by id", done => {
+  //   chai
+  //   .request(app)
+  //   const newCompany = new create
+  //   .get('/api/company/:id' + company.id)
+  //   .send(book)
+  //   .end((err, res) => {
+  //         res.should.have.status(200);
+  //         res.body.should.be.a('object');
+  //   })
+  // })
 });

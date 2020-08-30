@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Fiyin-Anne/tech-companies.svg?branch=develop)](https://travis-ci.org/Fiyin-Anne/tech-companies)
+[![Build Status](https://travis-ci.org/Fiyin-Anne/tech-companies.svg?branch=develop)](https://travis-ci.org/Fiyin-Anne/tech-companies) [![Coverage Status](https://coveralls.io/repos/github/Fiyin-Anne/tech-companies/badge.svg?branch=develop)](https://coveralls.io/github/Fiyin-Anne/tech-companies?branch=develop)
 
 # Tech-companies
 
