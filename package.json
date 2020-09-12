@@ -4,9 +4,9 @@
   "description": "A list of tech companies in Nigeria",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc --reporter=html --reporter=text mocha -r @babel/register ./test/index.test.js --timeout 10000 --recursive --exit || true ",
     "start": "nodemon --exec babel-node index.js",
-    "coverage": "npm run test && jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls --verbose"
   },
   "type": "module",
   "repository": {
@@ -32,10 +32,12 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "coveralls": "^3.1.0",
     "mocha": "^8.1.3",
-    "mocha-lcov-reporter": "^1.3.0"
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.1.0"
   }
 }
